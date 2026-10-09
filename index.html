@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Mall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Shopping Mall</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#cart" style="color:white">
+    Cart: <b id="cart-count">0</b>
+</a>
+        <a href="login.html">Login / Register</a></nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Welcome to My Shopping Mall!</h2>
+        <p>Discover fashion, electronics and more.</p>
+        <a href="#products" class="shop-btn">Shop Now</a>
+    </section>
+
+    <main id="products">
+    <h2>Our Products</h2>
+    <div class="categories">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('fashion')">Fashion</button>
+    <button onclick="filterCategory('electronics')">Electronics</button>
+    <button onclick="filterCategory('accessories')">Accessories</button>
+</div>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search products..."
+        oninput="searchProducts()"
+        style="width:80%; max-width:400px; padding:12px; margin:20px; border:1px solid #ccc; border-radius:8px; font-size:16px;"
+    >
+    <h2>Our Products</h2>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search products..."
+        oninput="searchProducts()"
+    >
+
+        <div class="products">
+
+    <div class="product" data-category="fashion">
+        <div class="emoji">👗</div>
+        <h3>Women's Dress</h3>
+        <p>₹1,499</p>
+        <button onclick="addToCart('Women\\'s Dress', 1499)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="product" data-category="fashion">
+        <div class="emoji">👟</div>
+        <h3>Sports Shoes</h3>
+        <p>₹1,999</p>
+        <button onclick="addToCart('sports shoes', 1999)"">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="electronics">
+        <div class="emoji">📱</div>
+        <h3>Smartphone</h3>
+        <p>₹15,999</p>
+        <button onclick="addToCart('smart phone',15999)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="electronics">
+        <div class="emoji">💻</div>
+        <h3>Laptop</h3>
+        <p>₹49,999</p>
+        <button onclick="addToCart('laptop',49999)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="electronics">
+        <div class="emoji">🎧</div>
+        <h3>Headphones</h3>
+        <p>₹999</p>
+        <button onclick="addToCart('headphones',999)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="accessories">
+        <div class="emoji">⌚</div>
+        <h3>Smart Watch</h3>
+        <p>₹2,499</p>
+        <button onclick="addToCart('smartwatch',24999)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="accessories">
+        <div class="emoji">👜</div>
+        <h3>Hand Bag</h3>
+        <p>₹1,299</p>
+        <button onclick="addToCart('handbag',1299)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="accessories">
+        <div class="emoji">🕶️</div>
+        <h3>Sunglasses</h3>
+        <p>₹799</p>
+        <button onclick="addToCart('sunglasses',799)">Add to Cart</button>
+    </div>
+
+</div>
+    </main>
+    <section id="cart" style="padding:30px; text-align:center;">
+    <h2>My Shopping Cart</h2>
+
+    <div id="cart-items">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <h3>Total: ₹<span id="cart-total">0</span></h3>
+
+    <button onclick="clearCart()">Clear Cart</button>
+</section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Your one-stop destination for shopping.</p>
+    </section>
+
+    <footer id="contact">
+        <p>Contact: support@mymall.example</p>
+        <p>Copyright 2026 My Shopping Mall</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
